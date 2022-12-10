@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+
+<head>
+  <link href="https://fonts.cdnfonts.com/css/segoe-ui-4" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+  <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+  <script src="index.js"></script>
+  <link rel="stylesheet" href="index.css">
+  <script>
+    var selectedNum = '';
+    var array = [];
+
+    function getRandomNoFromArr() {
+      const randomElement = array[Math.floor(Math.random() * array.length)];
+
+      document.getElementById('winningNumMsg').innerHTML = `Lucky Number: &nbsp; `;
+      document.getElementById('winningNum').innerHTML = randomElement;
+
+      if (randomElement == selectedNum) {
+        document.getElementById('message').innerHTML = ` You won 🎉🎉`;
+
+      } else {
+        document.getElementById('message').innerHTML = ` You lose 🫤🫤`;
+      }
+    }
+
+    function selectNum(tag) {
+      $(tag).attr("id");
+
+      selectedNum = $(tag).text();
+
+      if (selectedNum) {
+        document.getElementById('selectedNumMsg').innerHTML = `You've selected: &nbsp; `;
+        document.getElementById('selectedNum').innerHTML = selectedNum;
+      }
+
+      $(tag).css('background-color', 'green');
+      $(tag).css('border', '5px solid');
+    }
+    $(document).ready(function () {
+      var arr = getRandomArrayOfNos(10);
+      array = arr;
+
+      let searchParams = new URLSearchParams(window.location.search);
+      let name = searchParams.get('name');
+
+      document.getElementById('greet').innerHTML = `Welcome, ${name}`;
+
+      $.each(arr, function (i, num) {
+        $("#numbers").append(`
+          <div id='${i}' class="box" onclick='selectNum(this)'>${num}</div>
+        `);
+      });
+    });
+  </script>
+</head>
+
+<body>
+  <div>
+    <nav class="nav">
+      <div class="app-name">
+        Casino
+      </div>
+      <div>
+      </div>
+    </nav>
+
+    <div class="content-wrapper">
+      <div id="greet" style="text-decoration: underline;"></div>
+      <div id="greet" style="color: green; font-size: 40px; margin: 0 0 20px 0;">Please select a number</div>
+
+      <div style="display: flex; align-items: baseline;">
+        <div id="selectedNumMsg" style="height: 40px;"></div>
+        <div id="selectedNum"></div>
+      </div>
+
+      <div style="display: flex; align-items: baseline;">
+        <div id="winningNumMsg" style="height: 40px;"></div>
+        <span id="winningNum"></span>
+      </div>
+
+      <div id="message"></div>
+      <div
+        style="background-color: green; padding: 20px 40px; cursor: pointer; border-radius: 30px; color: white; font-weight: 700;"
+        onclick='getRandomNoFromArr()'>Get a lucky number</div>
+
+    </div>
+
+    <div class="table">
+      <div class="liner">
+        <div id="numbers" style="display: flex; justify-content: center;    margin: 20px 60px;
+        flex-wrap: wrap;">
+          <!-- div with number -->
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

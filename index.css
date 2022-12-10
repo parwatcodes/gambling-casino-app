@@ -1,0 +1,178 @@
+body {
+  margin: 0 auto;
+  width: 80%;
+  font-family: 'Segoe UI';
+}
+
+.app-name {
+  cursor: pointer;
+}
+
+.nav {
+  font-size: 20px;
+  font-weight: 600;
+  background-color: rgb(238, 238, 112);
+  padding: 20px;
+  box-shadow: rgb(99 99 99 / 20%) 0px 2px 8px 0px;
+}
+
+.img-container {
+  margin: 10px 0;
+}
+
+.img-container .img {
+  height: 400px;
+  width: 100%;
+}
+
+
+.form-wrapper {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  height: 500px;
+  margin: 20px 0;
+  padding: 20px;
+  /* background-color: #d0c8c8; */
+  background-image: url("images/html-color-codes-color-tutorials-hero.jpg");
+  background-size: cover;
+  box-shadow: rgb(99 99 99 / 20%) 0px 2px 8px 0px;
+}
+
+.form-wrapper label {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 20px;
+  color: #ffffff;
+  margin-right: 5px;
+}
+
+.form-wrapper input {
+  background: #FFFFFF;
+  border: 2px solid #E1E1E1;
+  border-radius: 5px;
+  height: 30px;
+  border-style: double;
+}
+
+.form-wrapper button {
+  height: 40px;
+  width: 310px;
+  font-weight: bold;
+  font-size: 20px;
+  margin-top: 20px;
+  border-style: unset;
+  background-color: rgb(80, 139, 215);
+  cursor: pointer;
+  border-radius: 5px;
+  transition: width 1s;
+  transition-timing-function: ease;
+  box-shadow: rgb(99 99 99 / 20%) 0px 2px 8px 0px;
+
+}
+
+.form-wrapper button:hover {
+  width: 315px;
+  background-color: rgb(80, 139, 215);
+}
+
+#greet {
+  text-align: center;
+  font-size: 30px;
+  font-weight: 600;
+  margin: 20px 0;
+}
+
+.content-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.content-wrapper #play {
+  background-color: rgb(41, 125, 41);
+  padding: 20px;
+  color: whitesmoke;
+  width: 200px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.table {
+  background-color: indianred;
+  height: 400px;
+  margin: 20px;
+  position: relative;
+  border-radius: 200px;
+}
+
+.table .liner {
+  background-color: indianred;
+  height: 400px;
+  margin: 20px;
+  border-radius: 200px;
+  background-color: #2b2929;
+  height: 360px;
+  margin: 20px;
+  border-radius: 200px;
+  position: absolute;
+  width: 96%;
+}
+
+.table .liner .box {
+  padding: 20px;
+  color: whitesmoke;
+  font-size: 70px;
+  font-weight: 700;
+  border: 1px solid;
+  border-radius: 40px;
+  margin: 10px;
+  cursor: pointer;
+}
+
+.table .liner .box:hover {
+  background-color: green;
+  border: 5px solid;
+}
+
+#play-btn {
+  background-color: rgb(41, 125, 41);
+  padding: 10px 5px;
+  color: whitesmoke;
+  width: 400px;
+  text-align: center;
+  cursor: pointer;
+  margin: 20px;
+  font-size: 20px;
+  font-weight: 700;
+  border-radius: 5px;
+  box-shadow: rgb(99 99 99 / 20%) 0px 2px 8px 0px;
+}
+
+#selectedNum {
+  font-size: 30px;
+  font-weight: 600;
+  color: green;
+}
+
+#selectedNumMsg {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+#winningNumMsg {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+#winningNum {
+  font-size: 30px;
+  font-weight: 600;
+  color: crimson;
+}
+
+#message {
+  margin: 20px 0;
+  font-size: 60px;
+  font-weight: 700;
+}
